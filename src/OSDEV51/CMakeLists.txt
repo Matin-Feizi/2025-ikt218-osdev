@@ -4,6 +4,12 @@
 # Tip: Use Ctrl+Shift+P in Visual Studio Code to get started with CMake.
 ########################################
 
+# Force CMake to use the cross-compilers
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_C_COMPILER i686-elf-gcc)
+set(CMAKE_CXX_COMPILER i686-elf-g++)
+
+
 # Skip compiler self-tests (saves time, avoids errors with some cross compilers)
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
